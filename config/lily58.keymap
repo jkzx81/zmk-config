@@ -25,6 +25,22 @@
             label = "MACR1";
             #binding-cells = <0>;
         };
+
+        mac_k_s_left: new_macro {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp LS(KP_N0) &kp KP_N3 &kp KP_N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "NEW_MACRO";
+            #binding-cells = <0>;
+        };
     };
 
     keymap {
