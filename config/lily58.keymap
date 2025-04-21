@@ -13,7 +13,7 @@
         macr1: macr1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp RET &kp RET>;
+            bindings = <&kp LS(D)>;
             label = "MACR1";
         };
     };
@@ -52,8 +52,8 @@
 &macr1     &kp C_BRI_DN  &kp C_BRI_UP  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP                     &kp HOME       &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp PAUSE_BREAK
 &trans     &kp F1        &kp F2        &kp F3      &kp F4        &kp F5                           &kp PAGE_UP    &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &trans
 &kp GRAVE  &kp F6        &kp F7        &kp F8      &kp F9        &kp F10                          &kp PAGE_DOWN  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp STAR   &kp EQUAL
-&trans     &kp F11       &kp F12       &kp F13     &kp F14       &kp F15       &trans    &trans   &kp END        &kp COMMA      &kp NUMBER_0  &kp PERIOD    &kp SLASH  &kp RIGHT_SHIFT
-                                       &trans      &trans        &trans        &trans    &kp RET  &trans         &kp BACKSPACE  &kp DELETE
+&trans     &kp F11       &kp F12       &kp F13     &kp F14       &kp F15       &macr1    &none    &kp END        &kp COMMA      &kp NUMBER_0  &kp PERIOD    &kp SLASH  &kp RIGHT_SHIFT
+                                       &trans      &trans        &trans        &trans    &kp RET  &tog 3         &kp BACKSPACE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -68,10 +68,10 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&studio_unlock  &trans  &trans  &trans  &trans  &trans                    &bt BT_CLR  &bt BT_SEL 0    &kp UP_ARROW  &bt BT_SEL 1     &bt BT_SEL 2         &bt BT_SEL 3
-&trans          &trans  &trans  &trans  &trans  &trans                    &trans      &kp LEFT_ARROW  &trans        &kp RIGHT_ARROW  &kp LS(PRINTSCREEN)  &trans
-&trans          &trans  &trans  &trans  &trans  &trans                    &trans      &trans          &kp DOWN      &trans           &trans               &trans
-&trans          &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans          &trans        &trans           &trans               &trans
+&studio_unlock  &trans  &trans  &trans  &trans  &trans                    &bt BT_CLR  &bt BT_SEL 0    &kp UP_ARROW   &bt BT_SEL 1      &bt BT_SEL 2         &bt BT_SEL 3
+&trans          &trans  &trans  &trans  &trans  &trans                    &trans      &kp LEFT_ARROW  &trans         &kp RIGHT_ARROW   &kp LS(PRINTSCREEN)  &trans
+&trans          &trans  &trans  &trans  &trans  &trans                    &trans      &trans          &kp DOWN       &trans            &trans               &trans
+&trans          &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans          &kp LESS_THAN  &kp GREATER_THAN  &trans               &trans
                                 &trans  &trans  &tog 1  &trans    &trans  &trans      &trans          &trans
             >;
 
