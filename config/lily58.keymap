@@ -74,7 +74,7 @@
             #binding-cells = <0>;
         };
 
-        mac_s_right:  mac_s_right {
+        mac_s_right: mac_s_right {
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -90,7 +90,7 @@
             #binding-cells = <0>;
         };
 
-        mac_slash:  mac_slash {
+        mac_slash: mac_slash {
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -106,7 +106,7 @@
             #binding-cells = <0>;
         };
 
-         mac_obrslash:  mac_obrslash {
+        mac_obrslash: mac_obrslash {
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -170,22 +170,14 @@
             #binding-cells = <0>;
         };
 
-        mac_ravno:  mac_ravno {
+        mac_ravno: mac_ravno {
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0 &kp KP_N0 &kp KP_N3 &kp KP_N8>,
-                <&macro_release>,
-                <&kp LALT>;
-
+            bindings = <&kp SPACE &kp EQUAL &kp SPACE>;
             label = "mac_ravno";
             #binding-cells = <0>;
         };
-
     };
 
     keymap {
@@ -219,11 +211,11 @@
             //                       |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP                       &kp HOME       &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp MINUS  &kp PAUSE_BREAK
-&macrTIL  &kp F1        &kp F2        &kp F3      &kp F4        &kp F5                             &kp PAGE_UP    &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &kp EQUAL
-&kp CAPS  &kp F6        &kp F7        &kp F8      &kp F9        &kp F10                            &kp PAGE_DOWN  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp STAR   &macrTIL
-&trans    &kp F11       &kp F12       &kp F13     &kp F14       &kp F15       &macrTIL    &none    &kp END        &kp COMMA      &kp NUMBER_0  &kp PERIOD    &kp SLASH  &kp RIGHT_SHIFT
-                                      &trans      &trans        &trans        &trans      &kp RET  &tog 3         &kp BACKSPACE  &kp DELETE
+&trans    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP                                   &kp HOME       &kp KP_N7      &kp KP_N8        &kp KP_N9        &kp MINUS   &kp PAUSE_BREAK
+&macrTIL  &kp F1        &kp F2        &kp F3      &kp F4        &kp F5                                         &kp PAGE_UP    &kp KP_N4      &kp KP_N5        &kp KP_NUMBER_6  &kp PLUS    &mac_ravno
+&kp CAPS  &kp F6        &kp F7        &kp F8      &kp F9        &kp F10                                        &kp PAGE_DOWN  &kp KP_N1      &kp KP_NUMBER_2  &kp KP_N3        &kp STAR    &macrTIL
+&trans    &kp F11       &kp F12       &kp F13     &kp F14       &kp F15       &mac_k_s_left    &mac_k_s_right  &kp END        &kp COMMA      &kp KP_N0        &kp PERIOD       &mac_slash  &kp RIGHT_SHIFT
+                                      &trans      &trans        &trans        &trans           &trans          &tog 3         &kp BACKSPACE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -238,11 +230,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&studio_unlock  &trans  &trans  &trans  &trans  &trans                    &bt BT_CLR  &bt BT_SEL 0    &kp UP_ARROW   &bt BT_SEL 1      &bt BT_SEL 2         &bt BT_SEL 3
-&trans          &trans  &trans  &trans  &trans  &trans                    &trans      &kp LEFT_ARROW  &trans         &kp RIGHT_ARROW   &kp LS(PRINTSCREEN)  &trans
-&trans          &trans  &trans  &trans  &trans  &trans                    &trans      &trans          &kp DOWN       &trans            &trans               &trans
-&trans          &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans          &kp LESS_THAN  &kp GREATER_THAN  &kp BACKSLASH        &trans
-                                &trans  &trans  &tog 1  &trans    &trans  &trans      &trans          &trans
+&studio_unlock  &trans        &trans        &trans        &trans        &trans                                     &none   &mac_and        &kp UP_ARROW  &none            &none                &none
+&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                               &trans  &kp LEFT_ARROW  &trans        &kp RIGHT_ARROW  &kp LS(PRINTSCREEN)  &trans
+&trans          &trans        &trans        &trans        &trans        &trans                                     &trans  &trans          &kp DOWN      &trans           &trans               &trans
+&trans          &trans        &trans        &trans        &trans        &trans        &mac_s_left    &mac_s_right  &trans  &trans          &mac_menshe   &mac_bolshe      &mac_obrslash        &trans
+                                            &trans        &trans        &tog 1        &trans         &trans        &trans  &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
