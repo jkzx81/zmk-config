@@ -10,7 +10,7 @@
 
 / {
     macros {
-        macrTIL: macr1 {
+        macrTIL: macrTIL {
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -18,15 +18,15 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp LS(KP_N0) &kp KP_N3 &kp KP_N9>,
+                <&kp KP_N0 &kp KP_N0 &kp KP_N3 &kp KP_N9>,
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "MACR1";
+            label = "macrTIL";
             #binding-cells = <0>;
         };
 
-        mac_k_s_left: new_macro {
+        mac_k_s_left: mac_k_s_left {
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -34,11 +34,27 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp LS(KP_N0) &kp KP_N3 &kp KP_N9>,
+                <&kp KP_N0 &kp KP_N0 &kp KP_N3 &kp KP_N9>,
                 <&macro_release>,
                 <&kp LALT>;
 
-            label = "NEW_MACRO";
+            label = "mac_k_s_left";
+            #binding-cells = <0>;
+        };
+
+        mac_k_s_right: mac_k_s_right {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp KP_N3 &kp KP_N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "mac_k_s_right";
             #binding-cells = <0>;
         };
     };
