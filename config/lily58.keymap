@@ -34,7 +34,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N0 &kp KP_N3 &kp KP_N9>,
+                <&kp KP_N0 &kp KP_N0 &kp KP_N9 &kp KP_N1>,
                 <&macro_release>,
                 <&kp LALT>;
 
@@ -50,13 +50,142 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N0 &kp KP_N3 &kp KP_N9>,
+                <&kp KP_N0 &kp KP_N0 &kp KP_N9 &kp KP_N3>,
                 <&macro_release>,
                 <&kp LALT>;
 
             label = "mac_k_s_right";
             #binding-cells = <0>;
         };
+
+        mac_s_left: mac_s_left {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N3>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "mac_s_left";
+            #binding-cells = <0>;
+        };
+
+        mac_s_right:  mac_s_right {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N5>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "mac_s_right";
+            #binding-cells = <0>;
+        };
+
+        mac_slash:  mac_slash {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp KP_N4 &kp KP_N7>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "mac_slash";
+            #binding-cells = <0>;
+        };
+
+         mac_obrslash:  mac_obrslash {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp KP_N9 &kp KP_N2>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "mac_obrslash";
+            #binding-cells = <0>;
+        };
+
+        mac_menshe: mac_menshe {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp KP_N6 &kp KP_N0>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "mac_menshe";
+            #binding-cells = <0>;
+        };
+
+        mac_bolshe: mac_bolshe {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp KP_N6 &kp KP_N2>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "mac_bolshe";
+            #binding-cells = <0>;
+        };
+
+        mac_and: mac_and {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp KP_N3 &kp KP_N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "mac_and";
+            #binding-cells = <0>;
+        };
+
+        mac_ravno:  mac_ravno {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N0 &kp KP_N3 &kp KP_N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "mac_ravno";
+            #binding-cells = <0>;
+        };
+
     };
 
     keymap {
